@@ -6,4 +6,11 @@
     <!-- Toolbar -->
     <color name="toolbar">#263B5A</color>
     <color name="toolbar_text">#FFFFFF</color>
+
+    <!-- Cartelera -->
+    <color name="fondo">#C5D3E8</color>
+    <color name="tarjeta">#EEF3FA</color>
+    <color name="acento">#F5A623</color>
+    <color name="texto_principal">#1F2A3A</color>
+    <color name="texto_secundario">#4A5B75</color>
 </resources>
