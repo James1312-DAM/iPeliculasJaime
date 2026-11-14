@@ -64,7 +64,13 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         }
         if(id==R.id.iralCine){
-            String lugar = "Yelmo Cines Premium Lagoh, Centro Comercial Palmas Altas, Sevilla";
+            Intent intent = new Intent(MainActivity.this, mapsActivity.class);
+            intent.putExtra("modo", "cine");
+            startActivity(intent);
+
+
+            //esto seria sin usar la api usando itent que te lanza fuera a la app de maps
+            /*String lugar = "Yelmo Cines Premium Lagoh, Centro Comercial Palmas Altas, Sevilla";
             Uri uri = Uri.parse("geo:0,0?q=" + Uri.encode(lugar));
             Intent intent = new Intent(Intent.ACTION_VIEW, uri);
             intent.setPackage("com.google.android.apps.maps");
@@ -72,9 +78,15 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             } catch (ActivityNotFoundException e) {
                 Toast.makeText(MainActivity.this, "Google Maps no está instalado", Toast.LENGTH_SHORT).show();
-            }
+            }*/
         }
         if (id == R.id.comoLlegar) {
+            Intent intent = new Intent(MainActivity.this, mapsActivity.class);
+            intent.putExtra("modo", "ruta");
+            startActivity(intent);
+
+
+            /*SIN USAR API DE GOOGLE LANZADO A FUERA A LA APP MAPS
             String lugar = "Yelmo Cines Premium Lagoh, Centro Comercial Palmas Altas, Sevilla";
             Uri uri = Uri.parse("https://www.google.com/maps/dir/?api=1&destination=" + Uri.encode(lugar) + "&travelmode=driving");
             Intent intent = new Intent(Intent.ACTION_VIEW, uri);
@@ -83,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             } catch (ActivityNotFoundException e) {
                 Toast.makeText(MainActivity.this, "Google Maps no está instalado", Toast.LENGTH_SHORT).show();
-            }
+            }*/
         }
 
         return true;
